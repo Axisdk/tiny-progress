@@ -1,9 +1,13 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
+import {HeaderComponent} from '../../shared/components/common/header/header.component';
 
 @Component({
-  selector: 'dashboard',
+  selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss',
+  imports: [
+    HeaderComponent
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DashboardComponent {
