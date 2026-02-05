@@ -1,11 +1,11 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
 
 @Component({
-  selector: 'app-menu',
-  templateUrl: 'menu.component.html',
-  styleUrl: 'menu.component.scss',
+  selector: 'app-task-card',
+  templateUrl: 'task-card.component.html',
+  styleUrl: 'task-card.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class MenuComponent {
+export class TaskCardComponent {
   constructor() {}
 }
