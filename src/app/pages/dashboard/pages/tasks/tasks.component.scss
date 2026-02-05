@@ -1,0 +1,58 @@
+.tasks {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    .item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .title {
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--text-100);
+    }
+  }
+
+  .body {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+    .total {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 5px;
+
+      &-title, &-value {
+        font-size: 18px;
+        font-weight: 500;
+        color: var(--text-200)
+      }
+    }
+  }
+}
