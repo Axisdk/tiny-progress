@@ -21,7 +21,7 @@
     .title {
       font-size: 24px;
       font-weight: 600;
-      color: var(--text-100);
+      color: var(--text-light);
     }
   }
 
@@ -30,7 +30,7 @@
     height: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     align-items: flex-start;
     gap: 25px;
   }

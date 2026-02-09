@@ -1,14 +1,14 @@
 <a [routerLink]="['/', task()?.id]" class="task-card">
   <div class="header">
     <h2 class="title">{{ task()?.title }}</h2>
-    <app-badge appearance="primary" size="lg">{{ task()?.status }}</app-badge>
+    <app-badge appearance="info" size="md">{{ task()?.status }}</app-badge>
   </div>
   <div class="body">
     <p class="description">{{ task()?.description }}</p>
 
     <div class="stacks">
       @for (stack of task()?.stacks; track stack) {
-        <div class="badge">{{ stack }}</div>
+        <app-badge appearance="dark" size="sm">{{ stack }}</app-badge>
       }
     </div>
   </div>

@@ -6,7 +6,7 @@
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  background: var(--background-400);
+  background: var(--background-primary-2);
   border-radius: 24px;
 
   &__item {
@@ -36,16 +36,16 @@
     &__link {
       font-size: 20px;
       font-weight: 500;
-      color: var(--text-300);
+      color: var(--text-gray-2);
       text-decoration: none;
       transition: .3s ease-in-out;
 
       &:hover {
-        color: var(--text-200)
+        color: var(--text-gray-3)
       }
 
       &.active {
-        color: var(--text-100)
+        color: var(--text-gray)
       }
     }
   }
@@ -60,7 +60,7 @@
       width: 35px;
       height: 35px;
       background: transparent;
-      border: 2px solid var(--line-100);
+      border: 2px solid var(--line-primary);
       border-radius: 8px;
 
       &__img {
@@ -73,14 +73,14 @@
       width: 40px;
       height: 40px;
       background: transparent;
-      border: 2px solid var(--line-100);
+      border: 2px solid var(--line-primary);
       border-radius: 100%;
       overflow: hidden;
       transition: .3s ease-in-out;
       cursor: pointer;
 
       &:hover {
-        border-color: var(--line-200)
+        border-color: var(--line-secondary)
       }
 
       &__img {

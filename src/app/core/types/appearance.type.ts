@@ -1,1 +1,1 @@
-export type AppearanceType = 'primary' | 'secondary' | 'success' | 'warning' | 'danger' | 'dark' | 'light'
+export type AppearanceType = 'primary' | 'success' | 'warning' | 'danger' | 'info' | 'dark' | 'light'

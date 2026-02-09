@@ -1,29 +1,70 @@
 .badge {
-    background-color: rgb(1, 90, 11);
-    border-radius: 11px;
-    padding: 4px 12px;
-    color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  &.primary {
+    background: var(--gradient-primary);
+    box-shadow: var(--shadow-primary);
+    color: var(--text-light);
+  }
+
+  &.success {
+    background: var(--gradient-success);
+    box-shadow: var(--shadow-success);
+    color: var(--text-light);
+  }
+
+  &.warning {
+    background: var(--gradient-warning);
+    box-shadow: var(--shadow-warning);
+    color: var(--text-primary);
+  }
+
+  &.danger {
+    background: var(--gradient-danger);
+    box-shadow: var(--shadow-danger);
+    color: var(--text-light);
+  }
+
+  &.info {
+    background: var(--gradient-info);
+    box-shadow: var(--shadow-info);
+    color: var(--text-light);
+  }
+
+  &.dark {
+    background: var(--gradient-dark);
+    color: var(--text-light);
+  }
+
+  &.light {
+    background: var(--gradient-light);
+    color: var(--text-primary);
+  }
+
+  &.xl {
+    font-size: 18px;
+    border-radius: 19px;
+    padding: 8px 16px;
+  }
+
+  &.lg {
+    font-size: 16px;
+    border-radius: 16px;
+    padding: 6px 14px 5px 14px;
+  }
+
+  &.md {
     font-size: 14px;
+    border-radius: 16px;
+    padding: 4px 10px 3px 10px;
+  }
 
-    &.primary {
-        background-color: var(--background-300);
-        color: var(--text-50);
-    }
-
-    &.secondary {
-        background-color: var(--background-400);
-        color: var(--text-50);
-    }
-
-    &.lg {
-        font-size: 16px;
-        border-radius: 16px;
-        padding: 6px 14px 5px 14px;
-    }
-
-    &.xl {
-        font-size: 18px;
-        border-radius: 19px;
-        padding: 8px 16px;
-    }
+  &.sm {
+    font-size: 12px;
+    border-radius: 16px;
+    padding: 4px 10px 3px 10px;
+  }
 }
