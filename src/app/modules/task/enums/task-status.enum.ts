@@ -1,0 +1,16 @@
+export enum TaskStatusEnum {
+  IDEA = 'idea',
+  BACKLOG = 'backlog',
+  TODO = 'todo',
+  PLANNED = 'planned',
+  DESIGN = 'design',
+  READY = 'ready',
+  IN_PROGRESS = 'in progress',
+  BLOCKED = 'blocked',
+  TESTING = 'testing',
+  REVIEWS = 'reviews',
+  DONE = 'done',
+  RELEASED = 'released',
+  ABANDONED = 'abandoned',
+  WAITING = 'waiting',
+}

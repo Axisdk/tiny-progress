@@ -8,8 +8,8 @@
     </div>
   </div>
   <div class="body">
-    @for (i of [0, 1, 2, 3, 4, 5]; track i) {
-      <app-task-card />
+    @for (task of tasks()?.tasks; track task.id) {
+      <app-task-card  [task]="task"/>
     }
   </div>
   <div class="footer">
