@@ -21,7 +21,7 @@
     .title {
       font-size: 24px;
       font-weight: 600;
-      color: var(--text-100);
+      color: var(--text-light);
     }
   }
 
@@ -30,9 +30,9 @@
     height: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     align-items: flex-start;
-    gap: 30px;
+    gap: 25px;
   }
 
   .footer {
@@ -48,7 +48,8 @@
       align-items: center;
       gap: 5px;
 
-      &-title, &-value {
+      &-title,
+      &-value {
         font-size: 18px;
         font-weight: 500;
         color: var(--text-200)

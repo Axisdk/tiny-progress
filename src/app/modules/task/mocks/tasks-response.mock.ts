@@ -7,8 +7,8 @@ export const TASKS_RESPONSE_MOCK: TasksResponseInterface = {
   tasks: [
     {
       id: '1',
-      title: 'Создать главную страницу',
-      description: 'Разработать главную страницу сайта с адаптивной версткой и подключением Angular.',
+      title: 'CS platform',
+      description: 'Игровая платформа для создания лобби и рейтинговой игры в CS2. Альтернатива FACEIT, CYBERSHOKE',
       status: TaskStatusEnum.IN_PROGRESS,
       stacks: [TechStackEnum.ANGULAR, TechStackEnum.TYPESCRIPT, TechStackEnum.HTML, TechStackEnum.CSS],
       collaborators: [
@@ -20,8 +20,8 @@ export const TASKS_RESPONSE_MOCK: TasksResponseInterface = {
     },
     {
       id: '2',
-      title: 'API для авторизации',
-      description: 'Создать REST API для регистрации и авторизации пользователей с JWT.',
+      title: 'Веб-сайт для школы',
+      description: 'Веб-сайт для школы программирования, с возможностью регистрации и просмотра уроков и журнала',
       status: TaskStatusEnum.TODO,
       stacks: [TechStackEnum.NODEJS, TechStackEnum.GO, TechStackEnum.JAVASCRIPT],
       collaborators: [
@@ -32,8 +32,8 @@ export const TASKS_RESPONSE_MOCK: TasksResponseInterface = {
     },
     {
       id: '3',
-      title: 'Прототип мобильного приложения',
-      description: 'Сделать прототип iOS приложения в Swift для демонстрации инвесторам.',
+      title: 'VaporGram',
+      description: 'Мобильное приложения для текстового и голосового общения в стиле телеграм + свои фишки',
       status: TaskStatusEnum.DESIGN,
       stacks: [TechStackEnum.SWIFT],
       collaborators: [
@@ -44,29 +44,66 @@ export const TASKS_RESPONSE_MOCK: TasksResponseInterface = {
     },
     {
       id: '4',
-      title: 'Настроить CI/CD',
-      description: 'Настроить автоматическую сборку и деплой проекта на AWS с помощью GitHub Actions.',
-      status: TaskStatusEnum.PLANNED,
-      stacks: [TechStackEnum.GO],
-      collaborators: [
-        { name: 'Дмитрий Кузнецов', imageUrl: 'https://i.pravatar.cc/150?img=5' }
+      title: 'Event Map',
+      description: 'Карта локальных мероприятий с возможностью добавлять события, звать друзей и строить маршруты',
+      status: TaskStatusEnum.DONE,
+      stacks: [
+        TechStackEnum.ANGULAR,
+        TechStackEnum.TYPESCRIPT,
+        TechStackEnum.CSS
       ],
-      date_create: new Date('2026-02-05T11:00:00'),
-      date_last_seen: new Date('2026-02-05T11:00:00')
+      collaborators: [
+        { name: 'Андрей Козлов', imageUrl: 'https://i.pravatar.cc/150?img=10' },
+        { name: 'Анна Соколова', imageUrl: 'https://i.pravatar.cc/150?img=11' }
+      ],
+      date_create: new Date('2025-12-12T10:00:00'),
+      date_last_seen: new Date('2026-01-20T16:40:00')
     },
     {
       id: '5',
-      title: 'Написать документацию',
-      description: 'Создать документацию для разработчиков и пользователей, включая API и инструкции по деплою.',
-      status: TaskStatusEnum.WAITING,
-      stacks: [TechStackEnum.JAVASCRIPT, TechStackEnum.TYPESCRIPT],
-      collaborators: [
-        { name: 'Анна Крылова', imageUrl: 'https://i.pravatar.cc/150?img=6' },
-        { name: 'Игорь Волков', imageUrl: 'https://i.pravatar.cc/150?img=7' }
+      title: 'Neighbor Tasks',
+      description: 'Сервис мелких заказов по соседству: помощь, доставка, бытовые услуги',
+      status: TaskStatusEnum.IN_PROGRESS,
+      stacks: [
+        TechStackEnum.NODEJS,
+        TechStackEnum.REACT
       ],
-      date_create: new Date('2026-02-02T15:30:00'),
-      date_last_seen: new Date('2026-02-06T09:45:00')
-    }
+      collaborators: [
+        { name: 'Олег Миронов', imageUrl: 'https://i.pravatar.cc/150?img=12' }
+      ],
+      date_create: new Date('2026-01-05T13:20:00'),
+      date_last_seen: new Date('2026-02-08T19:10:00')
+    },
+    {
+      id: '6',
+      title: 'Focus Buddy',
+      description: 'Приложение для концентрации: таймеры, статистика сессий и мягкая мотивация',
+      status: TaskStatusEnum.BLOCKED,
+      stacks: [
+        TechStackEnum.JAVASCRIPT,
+        TechStackEnum.HTML
+      ],
+      collaborators: [
+        { name: 'Дарья Волкова', imageUrl: 'https://i.pravatar.cc/150?img=13' }
+      ],
+      date_create: new Date('2025-11-30T09:30:00'),
+      date_last_seen: new Date('2026-01-02T11:00:00')
+    },
+    {
+      id: '7',
+      title: 'AutoHub',
+      description: 'Маркетплейс автомобилей с фильтрами, сравнением и историей объявлений',
+      status: TaskStatusEnum.BACKLOG,
+      stacks: [
+        TechStackEnum.ANGULAR,
+        TechStackEnum.TYPESCRIPT,
+        TechStackEnum.GO
+      ],
+      collaborators: [],
+      date_create: new Date('2025-10-18T15:45:00'),
+      date_last_seen: new Date('2025-10-18T15:45:00')
+    },
+
   ],
   prev: 'asd',
   next: 'asd'

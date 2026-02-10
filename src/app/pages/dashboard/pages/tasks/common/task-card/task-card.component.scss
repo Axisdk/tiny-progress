@@ -1,14 +1,23 @@
 .task-card {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 230px;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  background: var(--background-100);
-  border-radius: 10px;
+  background: var(--background-primary);
+  border-radius: 15px;
   overflow: hidden;
   text-decoration: none;
+  transition: .3s ease-in-out;
+
+  &:hover {
+    background: var(--background-primary-hover);
+
+    .footer {
+      background: var(--background-primary-hover);
+    }
+  }
 
   .header {
     padding: 20px 20px 0 20px;
@@ -20,58 +29,36 @@
     .title {
       font-size: 24px;
       font-weight: 600;
-      color: var(--text-200)
+      color: var(--text-light)
     }
-
-    .badge {
-      padding: 4px 8px;
-      font-size: 14px;
-      font-weight: 500;
-      color: var(--text-100);
-      text-align: center;
-      background: #008150;
-      border-radius: 12px;
-      box-shadow:
-        rgba(0, 129, 80, 0.35) 0px 22px 40px,
-        rgba(0, 0, 0, 0.18) 0px 8px 16px,
-        rgba(0, 129, 80, 0.25) 0px 2px 6px,
-        rgba(0, 0, 0, 0.12) 0px -2px 6px;}
   }
 
   .body {
     padding: 0 20px;
 
     .description {
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 500;
-      color: var(--text-300);
+      color: var(--text-gray-2);
     }
 
     .stacks {
-      margin-top: 10px;
+      margin-top: 15px;
       display: flex;
       align-items: center;
       gap: 8px;
-
-      .badge {
-        padding: 4px 8px;
-        font-size: 13px;
-        font-weight: 500;
-        color: var(--text-300);
-        background: #0d0d10;
-        border-radius: 12px;
-      }
     }
   }
 
   .footer {
-    margin-top: 30px;
-    padding: 10px 20px;
+    margin-top: 15px;
+    padding: 10px 20px 20px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
-    background: var(--background-150);
+    background: var(--background-light);
+    transition: .3s ease-in-out;
 
     .avatars {
       display: flex;
@@ -102,7 +89,8 @@
       flex-direction: column;
       gap: 5px;
 
-      &-last, &-create {
+      &-last,
+      &-create {
         display: flex;
         justify-content: flex-end;
         align-items: center;
@@ -111,13 +99,13 @@
         &-title {
           font-size: 11px;
           font-weight: 500;
-          color: var(--text-200)
+          color: var(--text-light-3)
         }
 
         &-value {
           font-size: 11px;
           font-weight: 500;
-          color: var(--text-200)
+          color: var(--text-light-3)
         }
       }
     }

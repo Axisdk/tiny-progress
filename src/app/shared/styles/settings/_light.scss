@@ -1,20 +1,102 @@
 :root {
-  --primary: #05080d;
-  --secondary: #131925;
-  --tertiary: #3f4b59;
+
+  --primary: #0a0a0a;
+  --secondary: #8a2bdf;
+  --tertiary: #c0ff01;
 
   // Text
-  --text-100: #e4e1e1;
-  --text-200: #d8d5d5;
-  --text-300: #46474a;
+  --text-primary: var(--primary);
+  --text-primary-2: #18171C;
+  --text-primary-hover: #1C1C1C;
+  --text-primary-light: #292828;
+  --text-secondary: var(--secondary);
+  --text-tertiary: var(--tertiary);
+  --text-light: #ececec;
+  --text-light-2: #FFFAFA;
+  --text-light-3: #b5b5b5;
+  --text-gray: #e5e4e2;
+  --text-gray-2: #474a51;
+  --text-gray-3: #323335;
 
-  --background-100: #191b1e;
-  --background-150: #212326;
-  --background-200: #15181a;
-  --background-300: #e4e1e1;
-  --background-350: #e1dede;
 
-  --line-100: #433f3f;
-  --line-200: #f7f7f7;
-  --line-300: #f7f7f7;
+  --background-primary: var(--primary);
+  --background-primary-2: #101112;
+  --background-primary-hover: #151515;
+  --background-light: #0d0d0e;
+
+  --line-primary: #373737;
+  --line-secondary: #293133;
+  --line-tertiary: #e5e4e2;
+
+  --status-primary: #8a2bdf;
+  --status-secondary: #c0ff01;
+  --status-success: #0A5F38;
+  --status-warning: #FFD700;
+  --status-danger: #960018;
+  --status-info: #6495ED;
+  --status-dark: #212129;
+  --status-light: #e1e1e1;
+
+  --gradient-primary: linear-gradient(
+      135deg,
+      #6f1ec7 0%,
+      var(--status-primary) 50%,
+      #a855f7 100%
+  );
+
+  --gradient-success: linear-gradient(
+      135deg,
+      #0a5f38 0%,
+      #1f8a5b 100%
+  );
+
+  --gradient-warning: linear-gradient(
+      135deg,
+      #b89600 0%,
+      var(--status-warning) 100%
+  );
+
+  --gradient-danger: linear-gradient(
+      135deg,
+      #6f0012 0%,
+      var(--status-danger) 100%
+  );
+
+  --gradient-info: linear-gradient(
+      135deg,
+      #3a5fcf 0%,
+      var(--status-info) 100%
+  );
+
+  --gradient-dark: linear-gradient(
+      180deg,
+      #1c1c22 0%,
+      var(--status-dark) 100%
+  );
+
+  --gradient-light: linear-gradient(
+      180deg,
+      #f5f5f5 0%,
+      var(--status-light) 100%
+  );
+
+  --shadow-primary:
+    0 0 0 1px rgba(138, 43, 223, 0.25),
+    0 8px 24px rgba(138, 43, 223, 0.35);
+
+  --shadow-success:
+    0 0 0 1px rgba(10, 95, 56, 0.3),
+    0 8px 20px rgba(10, 95, 56, 0.4);
+
+  --shadow-warning:
+    0 0 0 1px rgba(255, 215, 0, 0.35),
+    0 8px 20px rgba(255, 215, 0, 0.45);
+
+  --shadow-danger:
+    0 0 0 1px rgba(150, 0, 24, 0.35),
+    0 8px 20px rgba(150, 0, 24, 0.45);
+
+  --shadow-info:
+    0 0 0 1px rgba(100, 149, 237, 0.35),
+    0 8px 20px rgba(100, 149, 237, 0.45);
 }
