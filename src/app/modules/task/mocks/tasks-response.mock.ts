@@ -7,6 +7,7 @@ export const TASKS_RESPONSE_MOCK: TasksResponseInterface = {
   tasks: [
     {
       id: '1',
+      slug: 'cs-platform',
       title: 'CS platform',
       description: 'Игровая платформа для создания лобби и рейтинговой игры в CS2. Альтернатива FACEIT, CYBERSHOKE',
       status: TaskStatusEnum.IN_PROGRESS,
@@ -20,6 +21,7 @@ export const TASKS_RESPONSE_MOCK: TasksResponseInterface = {
     },
     {
       id: '2',
+      slug: 'web-site-for-school',
       title: 'Веб-сайт для школы',
       description: 'Веб-сайт для школы программирования, с возможностью регистрации и просмотра уроков и журнала',
       status: TaskStatusEnum.TODO,
@@ -32,6 +34,7 @@ export const TASKS_RESPONSE_MOCK: TasksResponseInterface = {
     },
     {
       id: '3',
+      slug: 'vapor-gram',
       title: 'VaporGram',
       description: 'Мобильное приложения для текстового и голосового общения в стиле телеграм + свои фишки',
       status: TaskStatusEnum.DESIGN,
@@ -44,6 +47,7 @@ export const TASKS_RESPONSE_MOCK: TasksResponseInterface = {
     },
     {
       id: '4',
+      slug: 'event-map',
       title: 'Event Map',
       description: 'Карта локальных мероприятий с возможностью добавлять события, звать друзей и строить маршруты',
       status: TaskStatusEnum.DONE,
@@ -61,6 +65,7 @@ export const TASKS_RESPONSE_MOCK: TasksResponseInterface = {
     },
     {
       id: '5',
+      slug: 'neighbor-tasks',
       title: 'Neighbor Tasks',
       description: 'Сервис мелких заказов по соседству: помощь, доставка, бытовые услуги',
       status: TaskStatusEnum.IN_PROGRESS,
@@ -76,6 +81,7 @@ export const TASKS_RESPONSE_MOCK: TasksResponseInterface = {
     },
     {
       id: '6',
+      slug: 'focus-buddy',
       title: 'Focus Buddy',
       description: 'Приложение для концентрации: таймеры, статистика сессий и мягкая мотивация',
       status: TaskStatusEnum.BLOCKED,
@@ -91,6 +97,7 @@ export const TASKS_RESPONSE_MOCK: TasksResponseInterface = {
     },
     {
       id: '7',
+      slug: 'auto-hub',
       title: 'AutoHub',
       description: 'Маркетплейс автомобилей с фильтрами, сравнением и историей объявлений',
       status: TaskStatusEnum.BACKLOG,

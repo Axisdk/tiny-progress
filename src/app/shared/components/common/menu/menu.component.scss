@@ -7,4 +7,12 @@
   gap: 20px;
   background: var(--background-primary-2);
   border-radius: 24px;
+
+  .ic {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
 }
