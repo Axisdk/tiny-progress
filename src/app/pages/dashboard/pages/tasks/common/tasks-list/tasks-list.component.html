@@ -1,0 +1,22 @@
+<div class="tasks-list">
+  <div class="header">
+    <div class="item">
+      <h2 class="title">Мои проекты</h2>
+    </div>
+    <div class="item">
+      <app-tasks-filter />
+    </div>
+  </div>
+  <div class="body">
+    @for (task of tasks()?.tasks; track task.id) {
+      <app-task-card [task]="task"/>
+    }
+  </div>
+  <div class="footer">
+    <div class="total">
+      <div class="total-title">Всего задач:</div>
+      <div class="total-value">26</div>
+    </div>
+    <app-pagination />
+  </div>
+</div>
