@@ -31,6 +31,8 @@ export class IconComponent {
       case "success": return 'var(--status-success)'
       case "warning": return 'var(--status-warning)'
       case "danger": return 'var(--status-danger)'
+      case "dark": return 'var(--status-dark)'
+      case "light": return 'var(--status-light)'
       default: return 'var(--status-light)'
     }
   })

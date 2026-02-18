@@ -1,8 +1,19 @@
 import {ModuleWithProviders} from '@angular/core';
-import {Home, LucideAngularModule, Settings, User} from 'lucide-angular';
+import {
+  Brain,
+  FolderCode,
+  Home,
+  Info,
+  ListTodo,
+  LoaderCircle,
+  LucideAngularModule,
+  Rocket,
+  Settings,
+  User
+} from 'lucide-angular';
 
 export function ProvideLucideIcons(): ModuleWithProviders<LucideAngularModule> {
-  const icons = { Home, User, Settings }
+  const icons = { Home, User, Settings, Info, Brain, ListTodo, Rocket, FolderCode }
 
   return LucideAngularModule.pick(icons)
 }

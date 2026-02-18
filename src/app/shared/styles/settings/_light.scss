@@ -29,13 +29,22 @@
   --line-tertiary: #e5e4e2;
 
   --status-primary: #8a2bdf;
+  --status-primary-hover: #963cdd;
   --status-secondary: #c0ff01;
-  --status-success: #0A5F38;
+  --status-secondary-hover: #fdf000;
+  --status-success: #25aa67;
+  --status-success-hover: #1f8c57;
   --status-warning: #FFD700;
-  --status-danger: #960018;
+  --status-warning-hover: #e3c001;
+  --status-danger: #ca0d2c;
+  --status-danger-hover: #b10d26;
   --status-info: #6495ED;
+  --status-info-hover: #568aec;
   --status-dark: #212129;
+  --status-dark-hover: #27272e;
   --status-light: #e1e1e1;
+  --status-light-hover: #d3d2d2;
+  --status-flat-hover: rgba(255, 255, 255, 0.1);
 
   --gradient-primary: linear-gradient(
       135deg,
