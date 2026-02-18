@@ -1,0 +1,69 @@
+.loading {
+
+  &.default {
+    border: 3px solid var(--line-tertiary);
+    border-bottom-color: var(--status-info);
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
+
+  &.prix-clip {
+    border-radius: 50%;
+    position: relative;
+    animation: rotation 1s linear infinite;
+
+    &::before {
+        content: "";
+        box-sizing: border-box;
+        position: absolute;
+        inset: 0px;
+        border-radius: 50%;
+        border: 3px solid var(--line-tertiary);
+        animation: prixClipFix 2s linear infinite ;
+      }
+  }
+
+
+  //Sizes
+  &.xl {
+    width: 20px;
+    height: 20px;
+  }
+
+  &.lg {
+    width: 16px;
+    height: 16px;
+  }
+
+  &.md {
+    width: 14px;
+    height: 14px;
+  }
+
+  &.sm {
+    width: 14px;
+    height: 14px;
+  }
+
+  //Appearance
+
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes prixClipFix {
+  0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+  25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+  50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+  75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
+  100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+}

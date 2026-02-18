@@ -1,4 +1,4 @@
-<a [routerLink]="['..', task()?.slug]" class="task-card">
+<a [routerLink]="['..', task()?.slug]" [queryParams]="{ id: task()?.id }" class="task-card">
   <div class="header">
     <h2 class="title">{{ task()?.title }}</h2>
     <app-badge appearance="info" size="md">{{ task()?.status }}</app-badge>

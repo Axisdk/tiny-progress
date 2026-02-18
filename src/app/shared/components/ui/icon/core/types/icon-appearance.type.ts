@@ -1,1 +1,8 @@
-export type IconAppearanceType = 'primary' | 'success' | 'danger' | 'warning' | 'info'
+export type IconAppearanceType =
+  'primary' |
+  'success' |
+  'danger' |
+  'warning' |
+  'info' |
+  'light' |
+  'dark'

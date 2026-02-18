@@ -1,0 +1,33 @@
+.task-details {
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    .top {
+
+      .title {
+        font-size: 32px;
+        font-weight: 600;
+        color: var(--text-light);
+      }
+
+      .filters {
+        margin-top: 20px;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        border-radius: 12px;
+        border: 1px solid var(--line-secondary);
+      }
+    }
+
+    .body {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+}

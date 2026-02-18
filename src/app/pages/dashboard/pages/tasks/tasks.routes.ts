@@ -18,6 +18,7 @@ export const tasksRoutes: Routes = [
       {
         path: ':slug',
         component: TaskDetailsComponent,
+        loadChildren: () => import('./nodules/task-details/task-details.routes').then(m => m.taskDetailsRoutes),
       }
     ]
   },
