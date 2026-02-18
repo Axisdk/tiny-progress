@@ -16,7 +16,7 @@
     <div class="avatars">
       @for (collaborator of task()?.collaborators; track collaborator.name) {
         <div class="avatar">
-          <img class="avatar__img" [src]="collaborator.imageUrl" [alt]="collaborator.name">
+          <img class="avatar__img" [src]="collaborator.imageUrl" [alt]="collaborator.name" />
         </div>
       }
     </div>

@@ -1,8 +1,8 @@
-import {TaskShortInterface} from './task-short.interface';
+import { TaskShortInterface } from './task-short.interface';
 
 export interface TasksResponseInterface {
-  count: number
-  tasks: TaskShortInterface[]
-  next: string
-  prev: string
+  count: number;
+  tasks: TaskShortInterface[];
+  next: string;
+  prev: string;
 }

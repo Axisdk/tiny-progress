@@ -9,7 +9,7 @@
   </div>
   <div class="body">
     @for (task of tasks()?.tasks; track task.id) {
-      <app-task-card [task]="task"/>
+      <app-task-card [task]="task" />
     }
   </div>
   <div class="footer">

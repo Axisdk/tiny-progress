@@ -1,10 +1,10 @@
-import {ChangeDetectionStrategy, Component} from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'app-pagination',
   templateUrl: 'pagination.component.html',
   styleUrl: 'pagination.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PaginationComponent {
   constructor() {}

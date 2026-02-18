@@ -1,24 +1,21 @@
 <div class="task-details">
-
   <div class="header">
     <div class="top">
       <h1 class="title">My project</h1>
 
       <div class="filters">
-        @for (taskRoute of taskRoutes; track  taskRoute.value) {
-          <app-button size="lg"
-                      [appearance]="activeRoute().value === taskRoute.value ? 'light' : 'flat'"
-                      [iconStart]="taskRoute.icon"
-                      (clicked)="changeRoute(taskRoute)"
+        @for (taskRoute of taskRoutes; track taskRoute.value) {
+          <app-button
+            size="lg"
+            [appearance]="activeRoute().value === taskRoute.value ? 'light' : 'flat'"
+            [iconStart]="taskRoute.icon"
+            (clicked)="changeRoute(taskRoute)"
           >
             {{ taskRoute.title }}
           </app-button>
         }
       </div>
     </div>
-    <div class="body">
-
-    </div>
+    <div class="body"></div>
   </div>
-
 </div>

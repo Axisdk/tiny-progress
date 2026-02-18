@@ -1,8 +1,8 @@
 export type IconAppearanceType =
-  'primary' |
-  'success' |
-  'danger' |
-  'warning' |
-  'info' |
-  'light' |
-  'dark'
+  | 'primary'
+  | 'success'
+  | 'danger'
+  | 'warning'
+  | 'info'
+  | 'light'
+  | 'dark';

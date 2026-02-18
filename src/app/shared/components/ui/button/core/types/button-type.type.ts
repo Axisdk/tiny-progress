@@ -1,1 +1,1 @@
-export type ButtonTypeType = 'rectangle' | 'square'
+export type ButtonTypeType = 'rectangle' | 'square';

@@ -1,10 +1,10 @@
-import {ChangeDetectionStrategy, Component} from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'app-tasks-filter',
   templateUrl: 'tasks-filter.component.html',
   styleUrl: 'tasks-filter.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TasksFilterComponent {
   constructor() {}

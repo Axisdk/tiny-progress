@@ -1,1 +1,1 @@
-export type LoadingType = 'default' | 'prix-clip'
+export type LoadingType = 'default' | 'prix-clip';

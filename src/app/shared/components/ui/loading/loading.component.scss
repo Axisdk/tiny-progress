@@ -1,5 +1,4 @@
 .loading {
-
   &.default {
     border: 3px solid var(--line-tertiary);
     border-bottom-color: var(--status-info);
@@ -15,16 +14,15 @@
     animation: rotation 1s linear infinite;
 
     &::before {
-        content: "";
-        box-sizing: border-box;
-        position: absolute;
-        inset: 0px;
-        border-radius: 50%;
-        border: 3px solid var(--line-tertiary);
-        animation: prixClipFix 2s linear infinite ;
-      }
+      content: '';
+      box-sizing: border-box;
+      position: absolute;
+      inset: 0px;
+      border-radius: 50%;
+      border: 3px solid var(--line-tertiary);
+      animation: prixClipFix 2s linear infinite;
+    }
   }
-
 
   //Sizes
   &.xl {
@@ -48,7 +46,6 @@
   }
 
   //Appearance
-
 }
 
 @keyframes rotation {
@@ -61,9 +58,19 @@
 }
 
 @keyframes prixClipFix {
-  0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
-  25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
-  50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
-  75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
-  100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+  0% {
+    clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+  }
+  25% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+  }
+  50% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
+  }
+  75% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+  }
+  100% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
 }

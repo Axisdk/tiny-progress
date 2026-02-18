@@ -1,6 +1,6 @@
-import {Routes} from '@angular/router';
-import {TaskDetailsComponent} from './nodules/task-details/task-details.component';
-import {TasksListComponent} from './common/tasks-list/tasks-list.component';
+import { Routes } from '@angular/router';
+import { TaskDetailsComponent } from './nodules/task-details/task-details.component';
+import { TasksListComponent } from './common/tasks-list/tasks-list.component';
 
 export const tasksRoutes: Routes = [
   {
@@ -18,8 +18,9 @@ export const tasksRoutes: Routes = [
       {
         path: ':slug',
         component: TaskDetailsComponent,
-        loadChildren: () => import('./nodules/task-details/task-details.routes').then(m => m.taskDetailsRoutes),
-      }
-    ]
+        loadChildren: () =>
+          import('./nodules/task-details/task-details.routes').then((m) => m.taskDetailsRoutes),
+      },
+    ],
   },
-]
+];

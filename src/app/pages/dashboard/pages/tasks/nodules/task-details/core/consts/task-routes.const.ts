@@ -1,30 +1,30 @@
-import {TaskRouterLinkEnum} from '../enums/task-router-link.enum';
-import {TaskRoutesSelectWithIconInterface} from '../interfaces/task-routes-select-with-icon.interface';
+import { TaskRouterLinkEnum } from '../enums/task-router-link.enum';
+import { TaskRoutesSelectWithIconInterface } from '../interfaces/task-routes-select-with-icon.interface';
 
 export const taskRoutes: TaskRoutesSelectWithIconInterface[] = [
   {
     title: 'Информация',
     value: TaskRouterLinkEnum.INFO,
-    icon: 'info'
+    icon: 'info',
   },
   {
     title: 'Мысли',
     value: TaskRouterLinkEnum.MIND,
-    icon: 'brain'
+    icon: 'brain',
   },
   {
     title: 'Доска задач',
     value: TaskRouterLinkEnum.TODO,
-    icon: 'list-todo'
+    icon: 'list-todo',
   },
   {
     title: 'Релизы',
     value: TaskRouterLinkEnum.RELEASES,
-    icon: 'rocket'
+    icon: 'rocket',
   },
   {
     title: 'Среда разработки',
     value: TaskRouterLinkEnum.DEVELOPMENT,
-    icon: 'folder-code'
+    icon: 'folder-code',
   },
-]
+];
