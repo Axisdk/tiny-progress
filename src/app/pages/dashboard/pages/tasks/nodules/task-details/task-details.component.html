@@ -1,7 +1,7 @@
 <div class="task-details">
   <div class="header">
     <div class="top">
-      <h1 class="title">My project</h1>
+      <h1 class="title">{{ title() }}</h1>
 
       <div class="filters">
         @for (taskRoute of taskRoutes; track taskRoute.value) {
@@ -16,6 +16,8 @@
         }
       </div>
     </div>
-    <div class="body"></div>
+    <div class="body">
+      <router-outlet></router-outlet>
+    </div>
   </div>
 </div>

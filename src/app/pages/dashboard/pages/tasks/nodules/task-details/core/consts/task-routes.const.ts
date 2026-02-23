@@ -1,5 +1,5 @@
-import { TaskRouterLinkEnum } from '../enums/task-router-link.enum';
-import { TaskRoutesSelectWithIconInterface } from '../interfaces/task-routes-select-with-icon.interface';
+import {TaskRouterLinkEnum} from '../enums/task-router-link.enum';
+import {TaskRoutesSelectWithIconInterface} from '../interfaces/task-routes-select-with-icon.interface';
 
 export const taskRoutes: TaskRoutesSelectWithIconInterface[] = [
   {
@@ -26,5 +26,10 @@ export const taskRoutes: TaskRoutesSelectWithIconInterface[] = [
     title: 'Среда разработки',
     value: TaskRouterLinkEnum.DEVELOPMENT,
     icon: 'folder-code',
+  },
+  {
+    title: 'Чаты проекта',
+    value: TaskRouterLinkEnum.CHATS,
+    icon: 'message-circle',
   },
 ];

@@ -4,4 +4,5 @@ export enum TaskRouterLinkEnum {
   RELEASES = 'releases',
   TODO = 'todo',
   DEVELOPMENT = 'development',
+  CHATS = 'chats',
 }

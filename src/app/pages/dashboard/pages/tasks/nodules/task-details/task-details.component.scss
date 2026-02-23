@@ -5,6 +5,14 @@
     gap: 15px;
 
     .top {
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      background: var(--background-primary-2);
+      border-radius: 12px;
+
       .title {
         font-size: 32px;
         font-weight: 600;
@@ -12,7 +20,6 @@
       }
 
       .filters {
-        margin-top: 20px;
         padding: 5px;
         display: flex;
         align-items: center;
