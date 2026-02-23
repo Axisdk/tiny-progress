@@ -1,22 +1,23 @@
-import { Injectable } from '@angular/core';
-import { TasksHelperService } from './tasks-helper.service';
-import { delay, Observable, of, tap } from 'rxjs';
-import { TasksResponseInterface } from '../interfaces/tasks-response.interface';
-import { HttpClient } from '@angular/common/http';
-import { TASKS_RESPONSE_MOCK } from '../mocks/tasks-response.mock';
+import {Injectable} from '@angular/core';
+import {TasksHelperService} from './tasks-helper.service';
+import {Observable, of, tap} from 'rxjs';
+import {TasksResponseInterface} from '../interfaces/tasks-response.interface';
+import {TASKS_RESPONSE_MOCK} from '../mocks/tasks-response.mock';
+import {
+  TaskRouterLinkEnum
+} from '../../../pages/dashboard/pages/tasks/nodules/task-details/core/enums/task-router-link.enum';
 
 @Injectable({
   providedIn: 'root',
 })
 export class TasksService {
   constructor(
-    private _http: HttpClient,
     private _tasksHelperService: TasksHelperService,
-  ) {}
+  ) {
+  }
 
-  public get$(): Observable<TasksResponseInterface> {
+  public getList$(): Observable<TasksResponseInterface> {
     return of(TASKS_RESPONSE_MOCK).pipe(
-      delay(2000),
       tap({
         subscribe: (): void => {
           this._tasksHelperService.isLoading$.next(false);
@@ -29,5 +30,12 @@ export class TasksService {
         },
       }),
     );
+  }
+
+  public getTaskDetails$(id: string, type: TaskRouterLinkEnum): Observable<unknown> {
+    return of({
+      id,
+      hello: 'world',
+    });
   }
 }

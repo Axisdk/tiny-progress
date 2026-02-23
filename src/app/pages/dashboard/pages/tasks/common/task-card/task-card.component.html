@@ -1,4 +1,4 @@
-<a [routerLink]="['..', task()?.slug]" [queryParams]="{ id: task()?.id }" class="task-card">
+<a [routerLink]="['..', task()?.slug]" [queryParams]="{ id: task()?.id, title: task()?.title }" class="task-card">
   <div class="header">
     <h2 class="title">{{ task()?.title }}</h2>
     <app-badge appearance="info" size="md">{{ task()?.status }}</app-badge>
@@ -16,7 +16,7 @@
     <div class="avatars">
       @for (collaborator of task()?.collaborators; track collaborator.name) {
         <div class="avatar">
-          <img class="avatar__img" [src]="collaborator.imageUrl" [alt]="collaborator.name" />
+          <img class="avatar__img" [src]="collaborator.imageUrl" [alt]="collaborator.name"/>
         </div>
       }
     </div>

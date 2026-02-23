@@ -1,24 +1,18 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  OnDestroy,
-  OnInit,
-  signal,
-  WritableSignal,
-} from '@angular/core';
-import { PaginationComponent } from '../../../../../../shared/components/common/pagination/pagination.component';
-import { TaskCardComponent } from '../task-card/task-card.component';
-import { TasksFilterComponent } from '../tasks-filter/tasks-filter.component';
-import { Subject, takeUntil } from 'rxjs';
-import { TasksResponseInterface } from '../../../../../../modules/task/interfaces/tasks-response.interface';
-import { TasksService } from '../../../../../../modules/task/services/tasks.service';
-import { TasksHelperService } from '../../../../../../modules/task/services/tasks-helper.service';
+import {ChangeDetectionStrategy, Component, OnDestroy, OnInit, signal, WritableSignal,} from '@angular/core';
+import {PaginationComponent} from '../../../../../../shared/components/common/pagination/pagination.component';
+import {TaskCardComponent} from '../task-card/task-card.component';
+import {TasksFilterComponent} from '../tasks-filter/tasks-filter.component';
+import {Subject, takeUntil} from 'rxjs';
+import {TasksResponseInterface} from '../../../../../../modules/task/interfaces/tasks-response.interface';
+import {TasksService} from '../../../../../../modules/task/services/tasks.service';
+import {TasksHelperService} from '../../../../../../modules/task/services/tasks-helper.service';
+import {MenuComponent} from '../../../../../../shared/components/common/menu/menu.component';
 
 @Component({
   selector: 'app-tasks-list',
   templateUrl: './tasks-list.component.html',
   styleUrl: './tasks-list.component.scss',
-  imports: [PaginationComponent, TaskCardComponent, TasksFilterComponent],
+  imports: [PaginationComponent, TaskCardComponent, TasksFilterComponent, MenuComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TasksListComponent implements OnInit, OnDestroy {
@@ -31,7 +25,8 @@ export class TasksListComponent implements OnInit, OnDestroy {
   constructor(
     private _tasksService: TasksService,
     private _tasksHelperService: TasksHelperService,
-  ) {}
+  ) {
+  }
 
   private _listenTasks(): void {
     this._tasksHelperService.tasks$
@@ -48,7 +43,7 @@ export class TasksListComponent implements OnInit, OnDestroy {
   }
 
   private _getTasks(): void {
-    this._tasksService.get$().pipe(takeUntil(this._destroy$)).subscribe();
+    this._tasksService.getList$().pipe(takeUntil(this._destroy$)).subscribe();
   }
 
   ngOnInit(): void {
