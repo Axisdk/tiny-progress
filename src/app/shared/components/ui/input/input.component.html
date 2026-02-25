@@ -1,0 +1,47 @@
+@let icStart = iconStart();
+<div [class]="['input', size()]"
+     [class.with-icon]="icStart"
+>
+  @if (icStart) {
+    <app-icon class="icon"
+              appearance="light"
+              size="md"
+              [icon]="icStart"
+    />
+  }
+  <input
+    placeholder=" "
+    [type]="isVisiblePassword() ? 'text' : type()"
+    [value]="value()"
+    (input)="onInput($event)"
+    (blur)="onBlur()"
+    class="field"
+  />
+  <p class="label">{{ label() }}</p>
+
+  <div class="actions">
+    @if (type() === 'password') {
+      <div class="action"
+           [class.visible]="value().length"
+      >
+        <app-button size="sm"
+                    appearance="flat"
+                    [iconStart]="isVisiblePassword() ? 'eye-off' : 'eye'"
+                    type="square"
+                    (clicked)="changeVisiblePassword()"
+        />
+      </div>
+    }
+
+    <div class="action"
+         [class.visible]="value().length"
+    >
+      <app-button size="sm"
+                  appearance="flat"
+                  iconStart="x"
+                  type="square"
+                  (clicked)="clearAll()"
+      />
+    </div>
+  </div>
+</div>

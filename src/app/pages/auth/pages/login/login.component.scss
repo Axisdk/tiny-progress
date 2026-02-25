@@ -1,0 +1,62 @@
+@use 'app/shared/styles/mixins/mixins' as mixins;
+
+.login {
+
+  .wrapper {
+    @include mixins.background-blur();
+    padding: 20px;
+    width: 400px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    .header {
+      margin-bottom: 10px;
+      width: 100%;
+
+      .title {
+        font-size: 32px;
+        font-weight: 600;
+        text-align: center;
+        color: var(--text-light);
+      }
+    }
+
+    .body {
+      width: 100%;
+
+      .form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .divider {
+        margin: 40px 0 20px;
+        width: 100%;
+        height: 1px;
+        background: var(--line-primary);
+      }
+
+    }
+
+    .footer {
+      width: 100%;
+
+      .alternative {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .btn {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

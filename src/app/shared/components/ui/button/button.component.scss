@@ -1,11 +1,12 @@
 .button {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
   background: transparent;
   border: none;
   cursor: pointer;
+  pointer-events: auto;
   transition: 0.3s ease-in-out;
 
   &:disabled {
@@ -88,6 +89,24 @@
 
     &.sm {
       padding: 4px 10px;
+    }
+  }
+
+  &.square {
+    &.xl {
+      padding: 24px;
+    }
+
+    &.lg {
+      padding: 20px;
+    }
+
+    &.md {
+      padding: 16px;
+    }
+
+    &.sm {
+      padding: 10px;
     }
   }
 
@@ -178,7 +197,7 @@
 
   &.outline {
     background: transparent;
-    border: 1px solid var(--line-tertiary);
+    border: 1px solid var(--line-primary);
 
     &:hover {
       border: 1px solid var(--line-secondary);

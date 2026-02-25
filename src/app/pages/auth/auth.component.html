@@ -1,0 +1,25 @@
+<div class="auth">
+  <div class="header" glowEffect>
+    <div class="header__item">
+      <div class="logo">
+        <img src="/images/logo/logo-light.svg" alt="nine squares" class="logo__img"/>
+      </div>
+    </div>
+    <div class="header__item">
+      <div class="actions">
+        <app-button type="square" appearance="flat" size="sm" iconStart="globe"/>
+        <app-button type="square" appearance="flat" size="sm" iconStart="sun"/>
+      </div>
+    </div>
+  </div>
+  <app-layout>
+    <div class="body">
+      <router-outlet></router-outlet>
+    </div>
+  </app-layout>
+
+  <div class="footer">
+    <a href="#" class="link">Правила пользования</a>
+    <a href="#" class="link">Пользовательское соглашение</a>
+  </div>
+</div>
