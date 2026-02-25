@@ -1,19 +1,12 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  input,
-  InputSignal,
-  output,
-  OutputEmitterRef,
-} from '@angular/core';
-import { SizesType } from '../../../../core/types/sizes.type';
-import { AppearanceType } from '../../../../core/types/appearance.type';
-import { ButtonTypeType } from './core/types/button-type.type';
-import { LucideAngularModule } from 'lucide-angular';
-import { IconComponent } from '../icon/icon.component';
-import { IconAppearanceType } from '../icon/core/types/icon-appearance.type';
-import { LoadingType } from '../loading/core/types/loading-type.type';
-import { LoadingComponent } from '../loading/loading.component';
+import {ChangeDetectionStrategy, Component, input, InputSignal, output, OutputEmitterRef,} from '@angular/core';
+import {SizesType} from '../../../../core/types/sizes.type';
+import {AppearanceType} from '../../../../core/types/appearance.type';
+import {ButtonTypeType} from './core/types/button-type.type';
+import {LucideAngularModule} from 'lucide-angular';
+import {IconComponent} from '../icon/icon.component';
+import {IconAppearanceType} from '../icon/core/types/icon-appearance.type';
+import {LoadingType} from '../loading/core/types/loading-type.type';
+import {LoadingComponent} from '../loading/loading.component';
 
 @Component({
   selector: 'app-button',
@@ -34,7 +27,8 @@ export class ButtonComponent {
 
   public clicked: OutputEmitterRef<void> = output<void>();
 
-  constructor() {}
+  constructor() {
+  }
 
   protected getIconAppearance(): IconAppearanceType {
     switch (this.appearance()) {
@@ -69,8 +63,7 @@ export class ButtonComponent {
   }
 
   protected click(): void {
-    if (this.isDisabled() || this.isLoading()) return;
-
+    if (this.isDisabled() || this.isLoading()) return
     this.clicked.emit();
   }
 }

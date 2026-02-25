@@ -1,4 +1,5 @@
 <button
+        type="button"
   [class]="['button', appearance(), size(), type()]"
   [disabled]="isDisabled()"
   (click)="click()"
@@ -19,6 +20,6 @@
       <app-icon [size]="size()" [appearance]="getIconAppearance()" [icon]="icEnd"></app-icon>
     }
   } @else {
-    <app-loading [type]="loadingType()" [size]="size()" [appearance]="getLoadingAppearance()" />
+    <app-loading [type]="loadingType()" [size]="size()" [appearance]="getLoadingAppearance()"/>
   }
 </button>

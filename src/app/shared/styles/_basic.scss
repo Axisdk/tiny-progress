@@ -7,3 +7,8 @@
 body {
   background: var(--background-primary);
 }
+
+::selection {
+  background: var(--background-primary-2);
+  color: var(--text-light-2);
+}

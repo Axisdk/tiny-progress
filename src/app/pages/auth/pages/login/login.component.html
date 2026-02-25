@@ -1,0 +1,24 @@
+<div class="login" glowEffect>
+  <div class="wrapper">
+    <div class="header">
+      <h2 class="title">Авторизация</h2>
+    </div>
+    <div class="body">
+      @if (form) {
+        <form class="form" [formGroup]="form">
+          <app-input formControlName="email" size="xl" label="E-mail" iconStart="mail"/>
+          <app-input formControlName="password" size="xl" label="Password" type="password" iconStart="lock-keyhole"/>
+          <app-button size="xl" appearance="dark" [isLoading]="isLoading()" (clicked)="login()">Войти</app-button>
+        </form>
+      }
+      <div class="divider"></div>
+    </div>
+    <div class="footer">
+      <div class="alternative">
+        <app-button class="btn" size="lg" appearance="outline">Google</app-button>
+        <app-button class="btn" size="lg" appearance="outline">ICloud</app-button>
+        <app-button class="btn" size="lg" appearance="outline">Github</app-button>
+      </div>
+    </div>
+  </div>
+</div>
