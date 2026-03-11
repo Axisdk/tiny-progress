@@ -1,32 +1,29 @@
 import {Injectable} from '@angular/core';
-import {LoginRequestInterface} from '../interfaces/login-request.interface';
-import {delay, Observable, of, tap} from 'rxjs';
-import {LoginResponseInterface} from '../interfaces/login-response.interface';
+import {delay, Observable, tap} from 'rxjs';
 import {UserHelperService} from './user-helper.service';
+import {UserInterface} from '../interfaces/user.interface';
+import {HttpClient} from '@angular/common/http';
+import {EnvService} from '../../env/services/env.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class UserService {
+
   constructor(
+    private _http: HttpClient,
+    private _envService: EnvService,
     private _userHelperService: UserHelperService,
   ) {
   }
 
-  public login(data: LoginRequestInterface): Observable<LoginResponseInterface> {
-    console.log('login', data)
+  public getUser$(): Observable<UserInterface> {
+    const url: string = `${this._envService.api}/users`
 
-    return of({
-      tokens: {
-        access_token: 'sdasdasd',
-        refresh_token: 'asdasd',
-      },
-      success: true,
-      message: 'Login successful!'
-    }).pipe(
+    return this._http.get<UserInterface>(url).pipe(
       delay(2000),
-      tap((response: LoginResponseInterface): void => {
-        this._userHelperService.setTokens(response.tokens);
+      tap((response: UserInterface): void => {
+        this._userHelperService.user$.next(response);
       })
     )
   }

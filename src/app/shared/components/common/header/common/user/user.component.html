@@ -1,0 +1,25 @@
+<div class="user"
+     [dropdown]="userMenu"
+     [(dropdownOpen)]="isOpenDropdown"
+     dropdownPosition="bottom-end"
+>
+  <img [src]="user()?.avatar_url" alt="avatar" class="avatar">
+</div>
+
+<ng-template #userMenu>
+  <div class="dropdown">
+    <div class="details">
+      <img [src]="user()?.avatar_url" alt="user avatar" class="avatar">
+      <div class="wrapper">
+        <p class="name">{{ `${user()?.first_name} ${user()?.last_name}` }}</p>
+        <p class="email">{{ user()?.email }}</p>
+      </div>
+    </div>
+    <div class="actions">
+      <app-button appearance="flat" size="md" iconStart="settings" spreadContent="flex-start">Настройки</app-button>
+      <app-button appearance="flat" size="md" iconStart="log-out" spreadContent="flex-start" (clicked)="logout()">
+        Выйти
+      </app-button>
+    </div>
+  </div>
+</ng-template>

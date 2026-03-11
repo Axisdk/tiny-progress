@@ -7,18 +7,23 @@ import {IconComponent} from '../icon/icon.component';
 import {IconAppearanceType} from '../icon/core/types/icon-appearance.type';
 import {LoadingType} from '../loading/core/types/loading-type.type';
 import {LoadingComponent} from '../loading/loading.component';
+import {ButtonShapeType} from './core/types/button-shape.type';
+import {ButtonSpreadContentType} from './core/types/button-spread-content.type';
+import {NgStyle} from '@angular/common';
 
 @Component({
   selector: 'app-button',
   templateUrl: './button.component.html',
   styleUrl: './button.component.scss',
-  imports: [LucideAngularModule, IconComponent, LoadingComponent],
+  imports: [LucideAngularModule, IconComponent, LoadingComponent, NgStyle],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ButtonComponent {
-  public type: InputSignal<ButtonTypeType> = input<ButtonTypeType>('rectangle');
+  public type: InputSignal<ButtonTypeType> = input<ButtonTypeType>('button');
   public size: InputSignal<SizesType> = input<SizesType>('xl');
   public appearance: InputSignal<AppearanceType> = input<AppearanceType>('primary');
+  public shape: InputSignal<ButtonShapeType> = input<ButtonShapeType>('rectangle');
+  public spreadContent: InputSignal<ButtonSpreadContentType> = input<ButtonSpreadContentType>('center')
   public iconStart: InputSignal<string | null> = input<string | null>(null);
   public iconEnd: InputSignal<string | null> = input<string | null>(null);
   public isLoading: InputSignal<boolean> = input<boolean>(false);

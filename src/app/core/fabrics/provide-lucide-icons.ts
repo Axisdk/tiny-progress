@@ -1,6 +1,9 @@
 import {ModuleWithProviders} from '@angular/core';
 import {
   Brain,
+  CircleAlert,
+  CircleCheck,
+  CirclePlus,
   Eye,
   EyeOff,
   FolderCode,
@@ -9,11 +12,13 @@ import {
   Info,
   ListTodo,
   LockKeyhole,
+  LogOut,
   LucideAngularModule,
   Mail,
   MessageCircle,
   MoveRight,
   Rocket,
+  Search,
   Settings,
   Sun,
   User,
@@ -38,7 +43,12 @@ export function ProvideLucideIcons(): ModuleWithProviders<LucideAngularModule> {
     EyeOff,
     Mail,
     LockKeyhole,
-    MoveRight
+    MoveRight,
+    CirclePlus,
+    Search,
+    CircleCheck,
+    CircleAlert,
+    LogOut
   };
 
   return LucideAngularModule.pick(icons);

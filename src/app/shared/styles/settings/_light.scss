@@ -39,8 +39,8 @@
   --status-danger-hover: #b10d26;
   --text-light-3--status-info: #6495ed;
   --status-info-hover: #568aec;
-  --status-dark: #212129;
-  --status-dark-hover: #27272e;
+  --status-dark: rgba(33, 33, 41, 0.4);
+  --status-dark-hover: rgba(39, 39, 46, 0.6);
   --status-light: #e1e1e1;
   --status-light-hover: #d3d2d2;
   --status-flat-hover: rgba(255, 255, 255, 0.1);
@@ -52,6 +52,11 @@
   --gradient-info: linear-gradient(135deg, #3a5fcf 0%, var(--status-info) 100%);
   --gradient-dark: linear-gradient(180deg, #1c1c22 0%, var(--status-dark) 100%);
   --gradient-light: linear-gradient(180deg, #f5f5f5 0%, var(--status-light) 100%);
+
+  --alert-gradient-success: linear-gradient(82deg, rgba(37, 170, 103, 0.7) 0%, rgba(22, 22, 22, 0.05) 50%);
+  --alert-gradient-warning: linear-gradient(82deg, rgba(184, 150, 0, 0.7) 0%, rgba(22, 22, 22, 0.05) 50%);
+  --alert-gradient-danger: linear-gradient(82deg, rgba(111, 0, 18, 0.7) 0%, rgba(22, 22, 22, 0.05) 50%);
+  --alert-gradient-info: linear-gradient(82deg, rgba(58, 95, 207, 0.7) 0%, rgba(22, 22, 22, 0.05) 50%);
 
   --shadow-primary: 0 0 0 1px rgba(138, 43, 223, 0.25), 0 8px 24px rgba(138, 43, 223, 0.35);
   --shadow-success: 0 0 0 1px rgba(10, 95, 56, 0.3), 0 8px 20px rgba(10, 95, 56, 0.4);

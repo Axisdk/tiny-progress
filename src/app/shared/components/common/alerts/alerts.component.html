@@ -1,0 +1,5 @@
+<div class="alerts">
+  @for (alert of alerts(); let index = $index; track alert) {
+    <app-alert @toast [alert]="alert" (close)="removeAlert(index)"/>
+  }
+</div>

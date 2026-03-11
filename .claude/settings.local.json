@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.ui-layouts.com)",
+      "mcp__ide__getDiagnostics",
+      "Bash(npm install:*)"
+    ]
+  }
+}
