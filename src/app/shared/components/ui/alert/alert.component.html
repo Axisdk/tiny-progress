@@ -1,0 +1,11 @@
+<div [class]="['alert', alert()?.appearance]">
+  <div class="wrapper">
+    <app-icon size="md" appearance="light" [icon]="icon()"></app-icon>
+    <div class="inner">
+      <span class="title">{{ alert()?.title }}</span>
+      <span class="message">{{ alert()?.message }}</span>
+    </div>
+  </div>
+
+  <app-button class="close" size="sm" iconStart="x" appearance="flat" shape="square" (clicked)="onClose()"></app-button>
+</div>

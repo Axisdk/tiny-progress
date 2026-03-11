@@ -3,20 +3,81 @@
   position: relative;
   overflow: hidden;
 
+  //Sizes
   &.xl {
 
+    .field {
+      height: 46px;
+      padding: 20px 60px 6px 20px;
+      border-radius: 10px;
+    }
+
+    .label {
+      font-size: 16px;
+      font-weight: 500;
+    }
   }
 
   &.lg {
 
+    .field {
+      height: 38px;
+      padding: 20px 60px 8px 20px;
+      border-radius: 10px;
+      font-size: 14px;
+
+      &:focus + .label,
+      &:not(:placeholder-shown) + .label {
+        top: 6px;
+        font-size: 10px;
+        transform: none;
+      }
+    }
+
+    .label {
+      font-size: 14px;
+      font-weight: 500;
+    }
   }
 
   &.md {
 
+    .field {
+      height: 32px;
+      padding: 5px 60px 5px;
+      border-radius: 10px;
+      font-size: 14px;
+
+      &:focus + .label,
+      &:not(:placeholder-shown) + .label {
+        opacity: 0;
+      }
+    }
+
+    .label {
+      font-size: 14px;
+      font-weight: 500;
+    }
   }
 
   &.sm {
 
+    .field {
+      height: 27px;
+      padding: 5px 60px 5px;
+      border-radius: 10px;
+      font-size: 12px;
+
+      &:focus + .label,
+      &:not(:placeholder-shown) + .label {
+        opacity: 0;
+      }
+    }
+
+    .label {
+      font-size: 12px;
+      font-weight: 500;
+    }
   }
 
   &.with-icon {
@@ -41,9 +102,7 @@
   }
 
   .field {
-    padding: 20px 60px 10px 20px;
     width: 100%;
-    height: 50px;
     border: 1px solid var(--line-primary);
     border-radius: 10px;
     background: transparent;

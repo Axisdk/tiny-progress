@@ -5,10 +5,16 @@
     </div>
     <div class="body">
       @if (form) {
-        <form class="form" [formGroup]="form">
-          <app-input formControlName="email" size="xl" label="E-mail" iconStart="mail"/>
+        <form class="form" [formGroup]="form" (ngSubmit)="submit()">
+          <app-input formControlName="user_name" size="xl" label="Username" type="text" iconStart="user"/>
           <app-input formControlName="password" size="xl" label="Password" type="password" iconStart="lock-keyhole"/>
-          <app-button size="xl" appearance="dark" [isLoading]="isLoading()" (clicked)="login()">Войти</app-button>
+          <app-button size="xl"
+                      appearance="dark"
+                      type="submit"
+                      [isLoading]="isLoading()"
+          >
+            Войти
+          </app-button>
         </form>
       }
       <div class="divider"></div>

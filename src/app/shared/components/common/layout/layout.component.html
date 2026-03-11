@@ -1,19 +1,8 @@
 <div class="layout">
   <div class="background">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
+    @for (cell of cells(); track $index) {
+      <span [class.active]="cell.active" [style.animation-delay]="cell.delay + 's'"></span>
+    }
   </div>
 
   <div class="content">

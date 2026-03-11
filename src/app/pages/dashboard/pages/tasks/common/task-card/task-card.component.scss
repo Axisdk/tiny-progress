@@ -1,18 +1,20 @@
+@use 'app/shared/styles/mixins/mixins' as mixins;
+
 .task-card {
+  @include mixins.background-blur();
   position: relative;
   width: 100%;
   height: 230px;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  background: var(--background-primary);
-  border-radius: 15px;
   overflow: hidden;
   text-decoration: none;
   transition: 0.3s ease-in-out;
 
   &:hover {
     background: var(--background-primary-hover);
+    border-color: var(--line-secondary);
 
     .footer {
       background: var(--background-primary-hover);
@@ -40,6 +42,10 @@
       font-size: 16px;
       font-weight: 500;
       color: var(--text-gray-2);
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
 
     .stacks {
@@ -57,7 +63,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 10px;
-    background: var(--background-light);
+    background: var(--background-primary);
     transition: 0.3s ease-in-out;
 
     .avatars {

@@ -1,7 +1,7 @@
-<div class="header">
+<div class="header" glowEffect>
   <div class="header__item">
     <div class="logo">
-      <img src="/images/logo/logo-light.svg" alt="nine squares" class="logo__img" />
+      <img src="/images/logo/logo-light.svg" alt="nine squares" class="logo__img"/>
     </div>
     <div class="nav">
       <a routerLink="/dashboard" routerLinkActive="active" class="nav__link">Доска задач</a>
@@ -9,18 +9,12 @@
       <a routerLink="/settings" routerLinkActive="active" class="nav__link">Настройка</a>
     </div>
   </div>
-  <div class="header__item">
+  <div class="header__item --last">
     <div class="actions">
-      <button class="btn">
-        <img class="btn__img" src="/images/icons/global.svg" alt="global" />
-      </button>
-
-      <button class="btn">
-        <img class="btn__img" src="/images/icons/moon.svg" alt="moon" />
-      </button>
-
+      <app-button shape="square" appearance="flat" size="md" iconStart="globe"/>
+      <app-button shape="square" appearance="flat" size="md" iconStart="sun"/>
       <div class="user">
-        <img class="user__img" src="/images/avatar/avatar.jpg" alt="avatar" />
+        <app-user/>
       </div>
     </div>
   </div>

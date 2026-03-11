@@ -1,7 +1,8 @@
 <button
-        type="button"
-  [class]="['button', appearance(), size(), type()]"
+  [type]="type()"
+  [class]="['button', appearance(), size(), shape()]"
   [disabled]="isDisabled()"
+  [ngStyle]="{'justify-content': spreadContent()}"
   (click)="click()"
 >
   @if (!isLoading()) {

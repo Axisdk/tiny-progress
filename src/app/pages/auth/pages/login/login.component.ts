@@ -5,9 +5,9 @@ import {ButtonComponent} from '../../../../shared/components/ui/button/button.co
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
 import {LoginRequestInterface} from '../../../../modules/user/interfaces/login-request.interface';
-import {UserService} from '../../../../modules/user/services/user.service';
 import {Subject, takeUntil, tap} from 'rxjs';
-import {LoginResponseInterface} from '../../../../modules/user/interfaces/login-response.interface';
+import {AuthService} from '../../../../modules/auth/services/auth.service';
+import {AlertService} from '../../../../modules/alert/services/alert.service';
 
 @Component({
   selector: 'app-login',
@@ -30,24 +30,25 @@ export class LoginComponent implements OnInit, OnDestroy {
   protected isLoading: WritableSignal<boolean> = signal<boolean>(false);
 
   constructor(
-    private _formBuilder: FormBuilder,
     private _router: Router,
-    private _userService: UserService,
+    private _formBuilder: FormBuilder,
+    private _authService: AuthService,
+    private _alertService: AlertService,
   ) {
   }
 
   private _initForm(): void {
     this.form = this._formBuilder.group({
-      email: ['', [Validators.required, Validators.email]],
+      user_name: ['', [Validators.required]],
       password: ['', Validators.required]
     })
   }
 
-  protected login(): void {
+  protected submit(): void {
     const formValue: LoginRequestInterface | undefined = this.form?.value
     if (!formValue) return
 
-    this._userService.login(formValue)
+    this._authService.login$(formValue)
       .pipe(
         takeUntil(this._destroy$),
         tap({
@@ -55,9 +56,17 @@ export class LoginComponent implements OnInit, OnDestroy {
           finalize: (): void => this.isLoading.set(false),
         })
       )
-      .subscribe((response: LoginResponseInterface): void => {
-        if (response.success) {
-          this._router.navigate(['/dashboard']);
+      .subscribe({
+        next: (): void => {
+          this._router.navigate(['/process-user']);
+        },
+        error: (): void => {
+          this._alertService.open({
+            appearance: 'error',
+            title: 'Ошибка',
+            message: 'Неверный логин или пароль',
+            autoClose: 5000
+          })
         }
       })
   }

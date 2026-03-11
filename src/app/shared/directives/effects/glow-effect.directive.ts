@@ -31,7 +31,7 @@ export class GlowDirective implements AfterViewInit, OnDestroy {
       borderRadius: 'inherit',
       pointerEvents: 'none',
       opacity: '0',
-      transition: 'opacity 0.35s ease',
+      transition: 'opacity 1.35s ease',
       zIndex: '0',
     });
 
