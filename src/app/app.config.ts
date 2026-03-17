@@ -1,5 +1,5 @@
 import {ApplicationConfig, importProvidersFrom, provideBrowserGlobalErrorListeners,} from '@angular/core';
-import {provideRouter, withComponentInputBinding} from '@angular/router';
+import { provideRouter, withComponentInputBinding, withViewTransitions } from '@angular/router';
 
 import {routes} from './app.routes';
 import {ProvideLucideIcons} from './core/fabrics/provide-lucide-icons';
@@ -11,9 +11,8 @@ import {provideAnimationsAsync} from '@angular/platform-browser/animations/async
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
-    provideRouter(routes),
     importProvidersFrom(ProvideLucideIcons()),
-    provideRouter(routes, withComponentInputBinding()),
+    provideRouter(routes, withComponentInputBinding(), withViewTransitions()),
     provideHttpClient(withInterceptors([apiInterceptor, errorsInterceptor])),
     provideAnimationsAsync(),
   ],

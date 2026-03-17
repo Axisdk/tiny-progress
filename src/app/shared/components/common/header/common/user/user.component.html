@@ -9,7 +9,7 @@
 <ng-template #userMenu>
   <div class="dropdown">
     <div class="details">
-      <img [src]="user()?.avatar_url" alt="user avatar" class="avatar">
+      <img [src]="user()?.avatar_url" alt="user avatar" class="avatar" (click)="goHome()">
       <div class="wrapper">
         <p class="name">{{ `${user()?.first_name} ${user()?.last_name}` }}</p>
         <p class="email">{{ user()?.email }}</p>

@@ -22,6 +22,9 @@ import {
   Settings,
   Sun,
   User,
+  UserMinus,
+  UserPlus,
+  Users,
   X,
 } from 'lucide-angular';
 
@@ -29,6 +32,9 @@ export function ProvideLucideIcons(): ModuleWithProviders<LucideAngularModule> {
   const icons = {
     Home,
     User,
+    Users,
+    UserPlus,
+    UserMinus,
     Settings,
     Info,
     Brain,

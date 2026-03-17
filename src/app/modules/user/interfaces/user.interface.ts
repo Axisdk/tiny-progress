@@ -1,16 +1,18 @@
 export interface UserInterface {
-  id: string
+  id: string;
   user_name: string;
   first_name: string;
   last_name: string;
   email: string;
   phone: string;
-  country: string
-  avatar_url: string
+  country: string;
+  avatar_url: string;
 
-  socials: string[]
+  socials: string[];
+  followers: string[];
+  following: string[];
 
-  is_blocked: boolean
-  is_admin: boolean
-  created_at: string
+  is_blocked: boolean;
+  is_admin: boolean;
+  created_at: string;
 }
