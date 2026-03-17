@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
-import { TasksComponent } from './pages/tasks/tasks.component';
+import { TasksListComponent } from './common/tasks-list/tasks-list.component';
+import { TaskDetailsComponent } from './pages/task-details/task-details.component';
 
 export const dashboardRoutes: Routes = [
   {
@@ -7,13 +8,14 @@ export const dashboardRoutes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'tasks',
+        component: TasksListComponent,
         pathMatch: 'full',
       },
       {
-        path: 'tasks',
-        component: TasksComponent,
-        loadChildren: () => import('./pages/tasks/tasks.routes').then((m) => m.tasksRoutes),
+        path: ':slug',
+        component: TaskDetailsComponent,
+        loadChildren: () =>
+          import('./pages/task-details/task-details.routes').then((m) => m.taskDetailsRoutes),
       },
     ],
   },

@@ -16,6 +16,6 @@ export class NotFoundComponent {
   ) {}
 
   protected goMain(): void {
-    this._router.navigate(['/']);
+    this._router.navigate(['/dashboard']);
   };
 }

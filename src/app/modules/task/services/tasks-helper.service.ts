@@ -1,9 +1,9 @@
 import {Injectable} from '@angular/core';
 import {BehaviorSubject} from 'rxjs';
 import {TasksResponseInterface} from '../interfaces/tasks-response.interface';
-import {
-  TaskRouterLinkEnum
-} from '../../../pages/dashboard/pages/tasks/nodules/task-details/core/enums/task-router-link.enum';
+import { TasksRequestInterface } from '../interfaces/tasks-request.interface';
+import { TasksFiltersInterface } from '../interfaces/tasks-filters.interface';
+import { TaskRouterLinkEnum } from '../../../pages/dashboard/pages/task-details/core/enums/task-router-link.enum';
 
 @Injectable({
   providedIn: 'root',
@@ -12,7 +12,8 @@ export class TasksHelperService {
   protected readonly object: ObjectConstructor = Object
   protected readonly taskRouterLinkEnum: typeof TaskRouterLinkEnum = TaskRouterLinkEnum
 
-  public tasks$: BehaviorSubject<TasksResponseInterface | null> =
+  public taskRequest$: BehaviorSubject<TasksRequestInterface> = new BehaviorSubject<TasksRequestInterface>({ page: 1, page_size: 9 })
+  public tasksResponse$: BehaviorSubject<TasksResponseInterface | null> =
     new BehaviorSubject<TasksResponseInterface | null>(null);
   public isLoading$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
@@ -36,6 +37,11 @@ export class TasksHelperService {
 
 
   constructor() {
+  }
+
+  public setFilters(filters: TasksFiltersInterface): void {
+    const currentRequest: TasksRequestInterface = this.taskRequest$.getValue();
+    this.taskRequest$.next({ ...currentRequest, filters });
   }
 
   public getTaskDetailsType(type: TaskRouterLinkEnum): BehaviorSubject<unknown> | undefined {

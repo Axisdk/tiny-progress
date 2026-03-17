@@ -40,6 +40,13 @@ export class UserComponent implements OnInit, OnDestroy {
       })
   }
 
+  protected goHome(): void {
+    const user: UserInterface | null = this.user()
+    if (!user) return
+
+    this._router.navigate([`/${user.user_name}`]);
+  }
+
   protected logout(): void {
     this._authService.logout$()
       .pipe(

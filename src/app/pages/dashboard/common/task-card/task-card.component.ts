@@ -1,9 +1,9 @@
 import {ChangeDetectionStrategy, Component, input, InputSignal} from '@angular/core';
 import {RouterLink} from '@angular/router';
-import {TaskShortInterface} from '../../../../../../modules/task/interfaces/task-short.interface';
 import {DatePipe} from '@angular/common';
-import {BadgeComponent} from '../../../../../../shared/components/ui/badge/badge.component';
-import {GlowDirective} from '../../../../../../shared/directives/effects/glow-effect.directive';
+import { BadgeComponent } from '../../../../shared/components/ui/badge/badge.component';
+import { GlowDirective } from '../../../../shared/directives/effects/glow-effect.directive';
+import { TaskShortInterface } from '../../../../modules/task/interfaces/task-short.interface';
 
 @Component({
   selector: 'app-task-card',

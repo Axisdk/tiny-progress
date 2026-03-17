@@ -1,35 +1,36 @@
 import {ChangeDetectionStrategy, Component, OnDestroy, OnInit, signal, WritableSignal,} from '@angular/core';
-import {PaginationComponent} from '../../../../../../shared/components/common/pagination/pagination.component';
 import {TaskCardComponent} from '../task-card/task-card.component';
 import {TasksFilterComponent} from '../tasks-filter/tasks-filter.component';
-import {Subject, takeUntil} from 'rxjs';
-import {TasksResponseInterface} from '../../../../../../modules/task/interfaces/tasks-response.interface';
-import {TasksService} from '../../../../../../modules/task/services/tasks.service';
-import {TasksHelperService} from '../../../../../../modules/task/services/tasks-helper.service';
-import {MenuComponent} from '../../../../../../shared/components/common/menu/menu.component';
-
+import {Subject, switchMap, takeUntil} from 'rxjs';
+import { TasksResponseInterface } from '../../../../modules/task/interfaces/tasks-response.interface';
+import { TasksService } from '../../../../modules/task/services/tasks.service';
+import { TasksHelperService } from '../../../../modules/task/services/tasks-helper.service';
+import { TasksFiltersInterface } from '../../../../modules/task/interfaces/tasks-filters.interface';
+import { ActivatedRoute, Params } from '@angular/router';
+import { UserDetailComponent } from './common/user-detail/user-detail.component';
 @Component({
   selector: 'app-tasks-list',
   templateUrl: './tasks-list.component.html',
   styleUrl: './tasks-list.component.scss',
-  imports: [PaginationComponent, TaskCardComponent, TasksFilterComponent, MenuComponent],
+  imports: [TaskCardComponent, TasksFilterComponent, UserDetailComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TasksListComponent implements OnInit, OnDestroy {
   private _destroy$: Subject<void> = new Subject<void>();
 
+  protected username: WritableSignal<string | null> = signal<string | null>(null)
   protected tasks: WritableSignal<TasksResponseInterface | null> =
     signal<TasksResponseInterface | null>(null);
   protected isLoading: WritableSignal<boolean> = signal<boolean>(false);
 
   constructor(
+    private _activatedRoute: ActivatedRoute,
     private _tasksService: TasksService,
     private _tasksHelperService: TasksHelperService,
-  ) {
-  }
+  ) {}
 
   private _listenTasks(): void {
-    this._tasksHelperService.tasks$
+    this._tasksHelperService.tasksResponse$
       .pipe(takeUntil(this._destroy$))
       .subscribe((response: TasksResponseInterface | null): void => {
         this.tasks.set(response);
@@ -43,7 +44,21 @@ export class TasksListComponent implements OnInit, OnDestroy {
   }
 
   private _getTasks(): void {
-    this._tasksService.getList$().pipe(takeUntil(this._destroy$)).subscribe();
+    this._activatedRoute.params
+      .pipe(
+        takeUntil(this._destroy$),
+        switchMap((params: Params) => {
+          const username: string = params['username'];
+          this.username.set(username);
+          return this._tasksService.getList$(username);
+        }),
+      )
+      .subscribe();
+  }
+
+  protected changeFilters(filters: TasksFiltersInterface | null): void {
+    if (!filters) return
+    this._tasksHelperService.setFilters(filters);
   }
 
   ngOnInit(): void {

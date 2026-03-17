@@ -1,8 +1,8 @@
 import {ChangeDetectionStrategy, Component, input, InputSignal, signal, WritableSignal,} from '@angular/core';
 import {taskRoutes} from './core/consts/task-routes.const';
-import {ButtonComponent} from '../../../../../../shared/components/ui/button/button.component';
 import {ActivatedRoute, Router, RouterOutlet} from '@angular/router';
 import {TaskRoutesSelectWithIconInterface} from './core/interfaces/task-routes-select-with-icon.interface';
+import { ButtonComponent } from '../../../../shared/components/ui/button/button.component';
 
 @Component({
   selector: 'app-task-details',
