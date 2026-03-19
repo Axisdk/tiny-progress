@@ -1,21 +1,21 @@
-<a [routerLink]="['..', task()?.slug]" [queryParams]="{ id: task()?.id, title: task()?.title }" class="task-card"
+<a [routerLink]="[ project()?.slug]" [queryParams]="{ id: project()?.id, title: project()?.title }" class="project-card"
    glowEffect>
   <div class="header">
-    <h2 class="title">{{ task()?.title }}</h2>
-    <app-badge appearance="info" size="md">{{ task()?.status }}</app-badge>
+    <h2 class="title">{{ project()?.title }}</h2>
+    <app-badge appearance="info" size="md">{{ project()?.status }}</app-badge>
   </div>
   <div class="body">
-    <p class="description">{{ task()?.description }}</p>
+    <p class="description">{{ project()?.description }}</p>
 
     <div class="stacks">
-      @for (stack of task()?.stacks; track stack) {
+      @for (stack of project()?.stacks; track stack) {
         <app-badge appearance="dark" size="sm">{{ stack }}</app-badge>
       }
     </div>
   </div>
   <div class="footer">
     <div class="avatars">
-      @for (collaborator of task()?.collaborators; track collaborator.name) {
+      @for (collaborator of project()?.collaborators; track collaborator.name) {
         <div class="avatar">
           <img class="avatar__img" [src]="collaborator.imageUrl" [alt]="collaborator.name"/>
         </div>
@@ -24,11 +24,11 @@
     <div class="dates">
       <div class="dates-last">
         <div class="dates-last-title">Дата создания</div>
-        <div class="dates-last-value">{{ task()?.date_create | date: 'dd.MM.yyyy' }}</div>
+        <div class="dates-last-value">{{ project()?.date_create | date: 'dd.MM.yyyy' }}</div>
       </div>
       <div class="dates-create">
         <div class="dates-create-title">Последний просмотр</div>
-        <div class="dates-create-value">{{ task()?.date_last_seen | date: 'dd.MM.yyyy' }}</div>
+        <div class="dates-create-value">{{ project()?.date_last_seen | date: 'dd.MM.yyyy' }}</div>
       </div>
     </div>
   </div>

@@ -4,78 +4,46 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5676c58c-2eec-49cd-95ba-96f6c0ca5922" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/pages/dashboard/common/tasks-filter/tasks-filter.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/pages/dashboard/common/tasks-list/common/user-detail/user-detail.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pages/task-details/common/pages/task-details-releases/task-details-releases.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pages/task-details/common/pages/task-details-todo/task-details-todo.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pages/task-details/common/pages/task-details-todo/task-details-todo.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/shared/styles/animations/_animations.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/shared/styles/animations/_fades.scss" afterDir="false" />
+    <list default="true" id="5676c58c-2eec-49cd-95ba-96f6c0ca5922" name="Changes" comment="refactor: routes, and add follow on user">
+      <change afterPath="$PROJECT_DIR$/src/app/pages/dashboard/common/user-detail/core/consts/user-routes.const.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/dashboard/common/user-detail/core/enums/user-details-router-links.enum.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/dashboard/common/user-detail/core/interfaces/user-details-routes-select-with-icon.interface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pages/user-followers/user-followers.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pages/user-followers/user-followers.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pages/user-followers/user-followers.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pages/user-overview/user-overview.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pages/user-overview/user-overview.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pages/user-overview/user-overview.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pages/user-posts/user-posts.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pages/user-posts/user-posts.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pages/user-posts/user-posts.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pages/user-projects/common/user-projects-list/user-projects-list.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pages/user-projects/common/user-projects-list/user-projects-list.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pages/user-projects/user-projects.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pages/user-projects/user-projects.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pages/user-projects/user-projects.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/abstract-classes/default-component.class.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.routes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/core/fabrics/provide-lucide-icons.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/fabrics/provide-lucide-icons.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/task/interfaces/task-details-info.interface.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/task/interfaces/task-details.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/task/interfaces/task-details.interface.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/task/mocks/tasks-details.mock.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/task/mocks/tasks-response.mock.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/task/services/tasks-helper.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/task/services/tasks-helper.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/modules/task/services/tasks.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/task/services/tasks.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/user/interfaces/user.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/user/interfaces/user.interface.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/modules/user/services/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/user/services/user.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/auth/auth.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/auth/auth.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/common/task-card/task-card.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pages/user-projects/common/user-projects-card/user-projects-card.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/common/task-card/task-card.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pages/user-projects/common/user-projects-card/user-projects-card.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/common/task-card/task-card.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pages/user-projects/common/user-projects-card/user-projects-card.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/common/tasks-filter/tasks-filter.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pages/user-projects/common/user-projects-filter/user-projects-filter.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/common/tasks-filter/tasks-filter.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pages/user-projects/common/user-projects-filter/user-projects-filter.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/common/tasks-filter/tasks-filter.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pages/user-projects/common/user-projects-filter/user-projects-filter.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/common/tasks-list/common/user-detail/user-detail.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/common/user-detail/user-detail.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/common/tasks-list/common/user-detail/user-detail.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/common/user-detail/user-detail.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/common/tasks-list/common/user-detail/user-detail.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/common/user-detail/user-detail.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/common/tasks-list/tasks-list.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/common/tasks-list/tasks-list.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/common/tasks-list/tasks-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pages/user-projects/common/user-projects-list/user-projects-list.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/dashboard.routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/pages/tasks/common/task-card/task-card.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/common/task-card/task-card.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/pages/tasks/common/task-card/task-card.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/common/task-card/task-card.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/pages/tasks/common/task-card/task-card.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/common/task-card/task-card.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/pages/tasks/common/tasks-filter/tasks-filter.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/common/tasks-filter/tasks-filter.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/pages/tasks/common/tasks-filter/tasks-filter.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/common/tasks-filter/tasks-filter.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/pages/tasks/common/tasks-filter/tasks-filter.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/pages/tasks/common/tasks-list/tasks-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/common/tasks-list/tasks-list.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/pages/tasks/common/tasks-list/tasks-list.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/common/tasks-list/tasks-list.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/pages/tasks/common/tasks-list/tasks-list.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/common/tasks-list/tasks-list.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/pages/tasks/nodules/task-details/common/pages/task-details-development/task-details-development.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/task/interfaces/tasks-filters.interface.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/pages/tasks/nodules/task-details/common/pages/task-details-development/task-details-development.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/modules/task/interfaces/tasks-request.interface.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/pages/tasks/nodules/task-details/common/pages/task-details-development/task-details-development.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pages/task-details/common/pages/task-details-development/task-details-development.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/pages/tasks/nodules/task-details/common/pages/task-details-info/task-details-info.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pages/task-details/common/pages/task-details-info/task-details-info.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/pages/tasks/nodules/task-details/common/pages/task-details-info/task-details-info.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/common/tasks-list/common/user-detail/user-detail.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/pages/tasks/nodules/task-details/common/pages/task-details-info/task-details-info.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pages/task-details/common/pages/task-details-info/task-details-info.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/pages/tasks/nodules/task-details/common/pages/task-details-mind/task-details-mind.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/common/tasks-list/common/user-detail/user-detail.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/pages/tasks/nodules/task-details/common/pages/task-details-mind/task-details-mind.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pages/task-details/common/pages/task-details-development/task-details-development.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/pages/tasks/nodules/task-details/common/pages/task-details-mind/task-details-mind.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pages/task-details/common/pages/task-details-mind/task-details-mind.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/pages/tasks/nodules/task-details/common/pages/task-details-releases/task-details-releases.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pages/task-details/common/pages/task-details-development/task-details-development.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/pages/tasks/nodules/task-details/common/pages/task-details-releases/task-details-releases.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pages/task-details/common/pages/task-details-info/task-details-info.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/pages/tasks/nodules/task-details/common/pages/task-details-releases/task-details-releases.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pages/task-details/common/pages/task-details-releases/task-details-releases.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/pages/tasks/nodules/task-details/common/pages/task-details-todo/task-details-todo.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pages/task-details/common/pages/task-details-mind/task-details-mind.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/pages/tasks/nodules/task-details/common/pages/task-details-todo/task-details-todo.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pages/task-details/common/pages/task-details-mind/task-details-mind.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/pages/tasks/nodules/task-details/common/pages/task-details-todo/task-details-todo.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pages/task-details/common/pages/task-details-todo/task-details-todo.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/pages/tasks/nodules/task-details/core/consts/task-routes.const.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pages/task-details/core/consts/task-routes.const.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/pages/tasks/nodules/task-details/core/enums/task-router-link.enum.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pages/task-details/core/enums/task-router-link.enum.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/pages/tasks/nodules/task-details/core/interfaces/task-routes-select-with-icon.interface.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pages/task-details/core/interfaces/task-routes-select-with-icon.interface.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/pages/tasks/nodules/task-details/task-details.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pages/task-details/task-details.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/pages/tasks/nodules/task-details/task-details.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pages/task-details/task-details.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/pages/tasks/nodules/task-details/task-details.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pages/task-details/task-details.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/pages/tasks/nodules/task-details/task-details.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pages/task-details/task-details.routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/pages/tasks/tasks.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/pages/tasks/tasks.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pages/task-details/common/pages/task-details-releases/task-details-releases.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/pages/tasks/tasks.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/pages/tasks/tasks.routes.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/specials/not-found/not-found.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/specials/not-found/not-found.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/specials/not-found/not-found.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/specials/not-found/not-found.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/pages/specials/proess-user/process-user.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/specials/proess-user/process-user.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shared/components/common/header/common/user/user.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/components/common/header/common/user/user.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shared/components/common/header/common/user/user.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/components/common/header/common/user/user.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shared/components/common/header/common/user/user.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/components/common/header/common/user/user.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shared/components/common/menu/menu.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shared/components/common/menu/menu.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shared/components/common/menu/menu.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shared/guards/process-user.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/guards/process-user.guard.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shared/styles/_basic.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/styles/_basic.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shared/styles/_styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/styles/_styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/pages/dashboard/pages/task-details/task-details.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/pages/dashboard/pages/task-details/task-details.component.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +51,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="refactor-routes" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectColorInfo">{
@@ -97,36 +70,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/projects/tiny-progress/tiny-progress-frontend/src/app/pages/dashboard&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.start.executor&quot;: &quot;Run&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;C:\\projects\\tiny-progress\\tiny-progress-frontend\\node_modules\\prettier&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\projects\\tiny-progress\\tiny-progress-frontend\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "git-widget-placeholder": "main",
+    "javascript.preferred.runtime.type.id": "node",
+    "last_opened_file_path": "C:/projects/tiny-progress/tiny-progress-frontend/src/app/pages/dashboard/pages",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.start.executor": "Run",
+    "prettierjs.PrettierConfiguration.Package": "C:\\projects\\tiny-progress\\tiny-progress-frontend\\node_modules\\prettier",
+    "ts.external.directory.path": "C:\\projects\\tiny-progress\\tiny-progress-frontend\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\projects\tiny-progress\tiny-progress-frontend\src\app\pages\dashboard" />
       <recent name="C:\projects\tiny-progress\tiny-progress-frontend\src\app\pages\dashboard\pages" />
-      <recent name="C:\projects\tiny-progress\tiny-progress-frontend\src\app\pages\dashboard\pages\common" />
+      <recent name="C:\projects\tiny-progress\tiny-progress-frontend\src\app\pages\dashboard\common" />
+      <recent name="C:\projects\tiny-progress\tiny-progress-frontend\src\app\pages\dashboard\common\user-project\common" />
+      <recent name="C:\projects\tiny-progress\tiny-progress-frontend\src\app\pages\dashboard\common\user-detail\core" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\projects\tiny-progress\tiny-progress-frontend\src\app\pages\dashboard" />
-      <recent name="C:\projects\tiny-progress\tiny-progress-frontend\src\app\pages\dashboard\pages" />
-      <recent name="C:\projects\tiny-progress\tiny-progress-frontend\src\app\pages\dashboard\pages\common" />
+      <recent name="C:\projects\tiny-progress\tiny-progress-frontend\src\app\pages\dashboard\common" />
     </key>
   </component>
   <component name="RunManager" selected="npm.start">
@@ -160,15 +132,17 @@
       <updated>1772557535454</updated>
       <workItem from="1772557536873" duration="17000" />
       <workItem from="1773332257792" duration="2319000" />
-      <workItem from="1773416087933" duration="2471000" />
-      <workItem from="1773676641469" duration="1601000" />
-      <workItem from="1773678342153" duration="8083000" />
-      <workItem from="1773763266889" duration="6000" />
-      <workItem from="1773765084984" duration="8052000" />
+      <workItem from="1773851032125" duration="5743000" />
+      <workItem from="1773939265182" duration="4107000" />
+      <workItem from="1773945155583" duration="4064000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="refactor: routes, and add follow on user" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor: routes, and add follow on user" />
   </component>
 </project>

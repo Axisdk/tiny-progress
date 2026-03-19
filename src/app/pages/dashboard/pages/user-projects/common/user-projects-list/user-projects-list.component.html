@@ -1,0 +1,15 @@
+<div class="tasks-list">
+  @if (isLoading()) {
+    <ng-container *ngTemplateOutlet="skeleton"/>
+  } @else {
+    @for (project of projects(); track project.id) {
+      <app-user-projects-card [project]="project"/>
+    }
+  }
+</div>
+
+<ng-template #skeleton>
+  @for (i of [].constructor(6); track $index) {
+    <div class="skeleton-card" [appSkeleton]="true"></div>
+  }
+</ng-template>
