@@ -6,18 +6,18 @@ import {
   signal,
   WritableSignal,
 } from '@angular/core';
-import { ButtonComponent } from '../../../../shared/components/ui/button/button.component';
-import { InputComponent } from '../../../../shared/components/ui/input/input.component';
-import { TasksFiltersInterface } from '../../../../modules/task/interfaces/tasks-filters.interface';
+import { ButtonComponent } from '../../../../../../shared/components/ui/button/button.component';
+import { InputComponent } from '../../../../../../shared/components/ui/input/input.component';
+import { TasksFiltersInterface } from '../../../../../../modules/task/interfaces/tasks-filters.interface';
 
 @Component({
-  selector: 'app-tasks-filter',
-  templateUrl: 'tasks-filter.component.html',
-  styleUrl: 'tasks-filter.component.scss',
+  selector: 'app-user-projects-filter',
+  templateUrl: 'user-projects-filter.component.html',
+  styleUrl: 'user-projects-filter.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [ButtonComponent, InputComponent],
 })
-export class TasksFilterComponent {
+export class UserProjectsFilterComponent {
 
   public onChangeFilters: OutputEmitterRef<TasksFiltersInterface | null> =
     output<TasksFiltersInterface | null>();

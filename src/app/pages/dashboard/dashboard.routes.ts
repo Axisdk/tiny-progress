@@ -1,22 +1,13 @@
 import { Routes } from '@angular/router';
-import { TasksListComponent } from './common/tasks-list/tasks-list.component';
-import { TaskDetailsComponent } from './pages/task-details/task-details.component';
+import { UserOverviewComponent } from './pages/user-overview/user-overview.component';
+import { UserProjectsComponent } from './pages/user-projects/user-projects.component';
+import { UserFollowersComponent } from './pages/user-followers/user-followers.component';
+import { UserPostsComponent } from './pages/user-posts/user-posts.component';
 
 export const dashboardRoutes: Routes = [
-  {
-    path: '',
-    children: [
-      {
-        path: '',
-        component: TasksListComponent,
-        pathMatch: 'full',
-      },
-      {
-        path: ':slug',
-        component: TaskDetailsComponent,
-        loadChildren: () =>
-          import('./pages/task-details/task-details.routes').then((m) => m.taskDetailsRoutes),
-      },
-    ],
-  },
+  { path: '', redirectTo: 'overview', pathMatch: 'full' },
+  { path: 'overview', component: UserOverviewComponent },
+  { path: 'projects', component: UserProjectsComponent },
+  { path: 'followers', component: UserFollowersComponent },
+  { path: 'posts', component: UserPostsComponent },
 ];

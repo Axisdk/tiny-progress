@@ -1,6 +1,6 @@
 @use 'app/shared/styles/mixins/mixins' as mixins;
 
-.task-card {
+.project-card {
   @include mixins.background-blur();
   position: relative;
   width: 100%;
@@ -10,15 +10,11 @@
   gap: 20px;
   overflow: hidden;
   text-decoration: none;
+  background: var(--background-primary-hover);
   transition: 0.3s ease-in-out;
 
   &:hover {
-    background: var(--background-primary-hover);
     border-color: var(--line-secondary);
-
-    .footer {
-      background: var(--background-primary-hover);
-    }
   }
 
   .header {
@@ -63,7 +59,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 10px;
-    background: var(--background-primary);
+    background: var(--background-primary-hover);
     transition: 0.3s ease-in-out;
 
     .avatars {

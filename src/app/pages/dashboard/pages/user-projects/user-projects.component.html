@@ -1,0 +1,9 @@
+<div class="user-projects">
+  <div class="header">
+    <app-user-projects-filter (onChangeFilters)="changeFilters($event)"/>
+  </div>
+  <div class="body">
+    <app-user-projects-list [projects]="projectsResponse()?.tasks ?? []" [isLoading]="isLoading()"/>
+  </div>
+  <div class="footer"></div>
+</div>

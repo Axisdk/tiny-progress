@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {TasksHelperService} from './tasks-helper.service';
-import {Observable, of, tap} from 'rxjs';
+import { delay, Observable, of, tap} from 'rxjs';
 import {TasksResponseInterface} from '../interfaces/tasks-response.interface';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { EnvService } from '../../env/services/env.service';
@@ -40,9 +40,10 @@ export class TasksService {
     }
 
     return this._http.get<TasksResponseInterface>(url, { params }).pipe(
+      delay(2000),
       tap({
         subscribe: (): void => {
-          this._tasksHelperService.isLoading$.next(false);
+          this._tasksHelperService.isLoading$.next(true);
         },
         next: (response: TasksResponseInterface): void => {
           this._tasksHelperService.tasksResponse$.next(response);

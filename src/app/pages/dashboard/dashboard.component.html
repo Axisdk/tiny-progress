@@ -3,6 +3,11 @@
     <app-header/>
   </div>
   <div class="body">
-    <router-outlet />
+    <div class="user">
+      <app-user-detail [username]="username()"/>
+    </div>
+    <div class="inner">
+      <router-outlet />
+    </div>
   </div>
 </div>

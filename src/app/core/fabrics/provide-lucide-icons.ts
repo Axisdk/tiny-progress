@@ -7,6 +7,7 @@ import {
   Eye,
   EyeOff,
   FolderCode,
+  FolderKanban,
   Globe,
   Home,
   Info,
@@ -20,6 +21,7 @@ import {
   Rocket,
   Search,
   Settings,
+  StickyNote,
   Sun,
   User,
   UserMinus,
@@ -54,7 +56,9 @@ export function ProvideLucideIcons(): ModuleWithProviders<LucideAngularModule> {
     Search,
     CircleCheck,
     CircleAlert,
-    LogOut
+    LogOut,
+    FolderKanban,
+    StickyNote
   };
 
   return LucideAngularModule.pick(icons);

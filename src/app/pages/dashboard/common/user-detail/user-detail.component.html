@@ -1,0 +1,66 @@
+<div class="user-detail">
+  <div class="user">
+    <div class="wrapper">
+      <div class="item">
+        <div class="avatar"
+             [appSkeleton]="isLoadingUser()">
+          <img class="img"
+               [src]="user()?.avatar_url"
+               alt="user avatar"
+          >
+        </div>
+      </div>
+      <div class="item">
+        <h3 class="username" [appSkeleton]="isLoadingUser()">{{ user()?.user_name }}</h3>
+        <h4 class="name" [appSkeleton]="isLoadingUser()">{{ `${ user()?.first_name } ${ user()?.last_name }` }}</h4>
+        @if (!isMe()) {
+          <app-button
+            appearance="flat"
+            size="md"
+            [iconStart]="isFollow() ? 'user-minus' : 'user-plus'"
+            [isLoading]="isLoadingFollow()"
+            (clicked)="followUser(isFollow())"
+            [appSkeleton]="isLoadingUser()"
+          >
+            {{ isFollow() ? 'Отписаться' : 'Подписаться' }}
+          </app-button>
+        }
+      </div>
+    </div>
+
+    <div class="details">
+      <div class="followers">
+        <div class="item" [appSkeleton]="isLoadingUser()">
+          <app-icon icon="users" size="md"/>
+          <p class="text">{{ user()?.followers?.length ?? 0 }} подписчиков</p>
+        </div>
+        <div class="item" [appSkeleton]="isLoadingUser()">
+          <app-icon icon="users" size="md"/>
+          <p class="text">{{ user()?.following?.length ?? 0 }} подписок</p>
+        </div>
+      </div>
+
+      <div class="socials">
+        @for (social of user()?.socials; track $index) {
+          <div class="social">
+            <app-icon icon="user" />
+            <p class="title">{{ social }}</p>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+
+  <div class="routes-tabs">
+    @for (route of userRoutesConst; track $index) {
+      <app-button size="md"
+                  [appearance]="activeRoute() === route.value ? 'dark' : 'flat'"
+                  [iconStart]="route.icon"
+                  spreadContent="flex-start"
+                  (clicked)="setActiveRoute(route.value)"
+      >
+        {{ route.title }}
+      </app-button>
+    }
+  </div>
+</div>
